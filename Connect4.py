@@ -75,7 +75,7 @@ def winCheck(xLocal,yLocal,type):
                 if(response):
                     reset()
         else:
-            winstate = messagebox.showinfo("Connect4", "Red has won!")
+            winstate = messagebox.showinfo("Connect4", "Yellow has won!")
             if(winstate):
                 response = messagebox.askokcancel("Connect4", "Will you try again?")
                 if(response):
