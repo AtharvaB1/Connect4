@@ -65,6 +65,21 @@ def winCheck(xLocal,yLocal,type):
             break
         countsidLeft += 1
         
+    for k in range(1, 4):
+        i, j = xLocal + k, yLocal + k
+        if i > 6 or j > 5:
+            break
+        if chips[i][j] != str(type):
+            break
+        countsidRite += 1
+    for k in range(1, 4):
+        i, j = xLocal - k, yLocal - k
+        if i < 0 or j < 0:
+            break
+        if chips[i][j] != str(type):
+            break
+        countsidRite += 1
+        
     if(countsidLeft>=4 or countsidRite>=4 or countHorz>=4 or countVert>=4):
         win = True
         disableAll()
